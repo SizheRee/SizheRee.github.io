@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>Hexo</title>
+  <title>Tensorflow-tutorial-1 | Hexo</title>
   <meta name="keywords" content>
-  <meta name="description" content="Hexo">
+  <meta name="description" content="Tensorflow-tutorial-1 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Linux 命令学习笔记对linux命令的熟悉是操作linux系统的基础中的基础。作为刚开始上手linux的新手，对基本命令应该谙熟于心，使用的时候才能高效地使用。 第一章 学会使用命令帮助1.1 回忆命令在linux终端，面对命令不知道怎么用，或者不记得命令的拼写及参数时，我们需要求助于系统的帮助文档；linux系统内置的帮助文档很详细，通常能解决我们的问题，我们需要掌握如何正确的去使用它们。">
 <meta name="keywords" content="linux,ubuntu">
@@ -53,7 +53,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -330,12 +330,43 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-2017-07-07-Tensorflow-tutorial-1" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">Tensorflow-tutorial-1</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2017-07-07 21:27:46'>2017-07-07 20:41</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tensorflow学习笔记"><span class="toc-text">Tensorflow学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Tensorflow基础关键知识点总结"><span class="toc-text">1.  Tensorflow基础关键知识点总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-数据流图"><span class="toc-text">1.1 数据流图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-节点依赖"><span class="toc-text">1.2 节点依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-张量思维"><span class="toc-text">1.3 张量思维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-数据类型"><span class="toc-text">1.4 数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-运算符重载"><span class="toc-text">1.5 运算符重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-创建节点"><span class="toc-text">1.6 创建节点</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -348,36 +379,50 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/">Hexo</a> 生成，部署在 <a href="https://pages.github.com/">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Tensorflow学习笔记"><a href="#Tensorflow学习笔记" class="headerlink" title="Tensorflow学习笔记"></a>Tensorflow学习笔记</h1><h2 id="1-Tensorflow基础关键知识点总结"><a href="#1-Tensorflow基础关键知识点总结" class="headerlink" title="1.  Tensorflow基础关键知识点总结"></a>1.  Tensorflow基础关键知识点总结</h2><h3 id="1-1-数据流图"><a href="#1-1-数据流图" class="headerlink" title="1.1 数据流图"></a>1.1 数据流图</h3><ul>
+<li>构建Tensorflow程序要做的仅仅只有两步,第一步是构造数据流图,第二步是运行数据流图.要弄清楚Tensorflow的实现细节,就要对数据流图的结构了如指掌。</li>
+<li>数据流图这种特殊的有向图是用来定义计算结构的。数据流图的点可以看做是一个operation，而边可以看做是一个或多个Tensor。<br>  <img src="./3.2.1.jpg" alt><h3 id="1-2-节点依赖"><a href="#1-2-节点依赖" class="headerlink" title="1.2 节点依赖"></a>1.2 节点依赖</h3></li>
+<li>节点依赖：对于节点A，如果输出是后续节点B所必需的，那么称节点A为节点B的依赖节点。可以看出，上图中的a,b,c,d都是e的依赖节点。循环依赖是不可计算的。节点依赖让Tensorflow组织图成为了可能。</li>
+<li>这背后的概念相当简单,我们唯一需要确保的是为每个节点的直接(而非间接)依赖节点维护一个列表。可从一个空栈开始,它最终将保存所有我们希望<br>运行的节点。从你希望获得其输出的节点开始。显然它必须得到执行,因此令其入栈。接下来查看该输出节点的依赖节点列表,这意味着为计算输出,那些节点必须运行,因此将它们全部入栈。然后,对所有那些节点进行检查,看它们的直接依赖节点有哪些,然后将它们全部入栈。继续这种追溯模式,直到数据流图中的所有依赖节点均已入栈。按照这种方式,便可保证我们获得运行该数据流图所需的全部节点,且只包含所有必需的节点。此外,利用上述栈结构,可对其中的节点进行排序,从而保证当遍历该栈时,其中的所有节点都会按照一定的次序得到运行。唯一需要注意的是需要追踪哪些节点已经完成了计算,并将它们的输出保存在内存中,以避免对同一节点反复计算。按照这种方式,便可确保计算量尽可能地精简,从而在规模较大的数据流图上节省以小时计的宝贵处理时间。<h3 id="1-3-张量思维"><a href="#1-3-张量思维" class="headerlink" title="1.3 张量思维"></a>1.3 张量思维</h3></li>
+<li>张量思维的重点就是所有的数据都可以看做是n维张量，所有的计算都可以是看做对ｎ维张量进行操作，由于Tensorflow完全以numpy中的数据类型作为基础，所以可以理解就是numpy中的nparray<h3 id="1-4-数据类型"><a href="#1-4-数据类型" class="headerlink" title="1.4 数据类型"></a>1.4 数据类型</h3></li>
+<li>Tensorflow数据类型，当对接受张量类型进行定义时，尽量显示声明所给张量类型，这样有助于在ｂｕｇ时快速定位错误。<br>  <img src="./3.2.2.jpg" alt><h3 id="1-5-运算符重载"><a href="#1-5-运算符重载" class="headerlink" title="1.5 运算符重载"></a>1.5 运算符重载</h3></li>
+<li>Tensorflow利用python魔术方法将部分运算符进行重载，如果在构建数据流图的时候不关心一些具体的属性，则可以用简单的运算符快速构建数据流图。<br>  <img src="./3.2.3.jpg" alt><br>  <img src="./3.2.4.jpg" alt><h3 id="1-6-创建节点"><a href="#1-6-创建节点" class="headerlink" title="1.6 创建节点"></a>1.6 创建节点</h3></li>
 </ul>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Tensorflow-tutorial-1</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="John Doe">John Doe</a></p>
+    <p><span class="copy-title">发布时间:</span>2017-07-07, 20:41:15</p>
+    <p><span class="copy-title">最后更新:</span>2017-07-07, 21:27:46</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2017/07/07/2017-07-07-Tensorflow-tutorial-1/" title="Tensorflow-tutorial-1">http://yoursite.com/2017/07/07/2017-07-07-Tensorflow-tutorial-1/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>

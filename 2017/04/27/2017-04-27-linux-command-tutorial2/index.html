@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content>
-  <meta name="description" content="Hexo">
+  <title>linux命令学习笔记2 文件及目录管理 | Hexo</title>
+  <meta name="keywords" content=" linux , ubuntu ">
+  <meta name="description" content="linux命令学习笔记2 文件及目录管理 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Linux 命令学习笔记对linux命令的熟悉是操作linux系统的基础中的基础。作为刚开始上手linux的新手，对基本命令应该谙熟于心，使用的时候才能高效地使用。 第一章 学会使用命令帮助1.1 回忆命令在linux终端，面对命令不知道怎么用，或者不记得命令的拼写及参数时，我们需要求助于系统的帮助文档；linux系统内置的帮助文档很详细，通常能解决我们的问题，我们需要掌握如何正确的去使用它们。">
 <meta name="keywords" content="linux,ubuntu">
@@ -53,7 +53,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -330,12 +330,59 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-2017-04-27-linux-command-tutorial2" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">linux命令学习笔记2 文件及目录管理</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="linux">linux</a>/
+            
+                <a href="javascript:" data-rel="command">command</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">linux</a>
+            
+            <a href="javascript:" class="color2">ubuntu</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2017-04-30 19:34:03'>2017-04-27 13:57</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第二章-文件及目录管理"><span class="toc-text">第二章 文件及目录管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-0-概述"><span class="toc-text">2.0 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-创建和删除"><span class="toc-text">2.1 创建和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-目录切换"><span class="toc-text">2.2 目录切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-列出目录项"><span class="toc-text">2.3 列出目录项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-查找目录及文件"><span class="toc-text">2.4 查找目录及文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-查看文件内容"><span class="toc-text">2.5 查看文件内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-查找文件内容"><span class="toc-text">2.6 查找文件内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-给文件增加别名"><span class="toc-text">2.8 给文件增加别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-管道和重定向"><span class="toc-text">2.9 管道和重定向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-10-设置环境变量"><span class="toc-text">2.10 设置环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-11-bash快捷输入或删除"><span class="toc-text">2.11 bash快捷输入或删除</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -348,36 +395,143 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/">Hexo</a> 生成，部署在 <a href="https://pages.github.com/">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第二章-文件及目录管理"><a href="#第二章-文件及目录管理" class="headerlink" title="第二章 文件及目录管理"></a>第二章 文件及目录管理</h1><h2 id="2-0-概述"><a href="#2-0-概述" class="headerlink" title="2.0 概述"></a>2.0 概述</h2><p>文件管理不外乎文件或目录的创建,删除，查询，移动。有<code>mkdir/rm/mv</code>。<br>文件查询是重点，用<code>find</code>来进行查询；<code>find</code>参数丰富，非常强大。<br>查看文件内容是个大的话题，文本的处理有很多工具供我们使用。在本章中只是点到即止。<br>有时候我们需要给文件备份，或者创建一个别名，我们需要用到<code>ln</code>。</p>
+<h2 id="2-1-创建和删除"><a href="#2-1-创建和删除" class="headerlink" title="2.1 创建和删除"></a>2.1 创建和删除</h2><ul>
+<li>目录的创建<pre><code>$ mkdir dir</code></pre></li>
+<li>目录的删除(只能删除空目录)<pre><code>$ rmdir dir</code></pre></li>
+<li>删除非空目录(如果去掉f参数每个删除都会提示y/n)<pre><code>$ rm -rf file 目录</code></pre></li>
+<li>删除日志<pre><code>$ rm *log
+(等价： $ find ./ -name &quot;*log&quot; -exec rm {} \;)</code></pre></li>
+<li>移动或重命名<pre><code>$ mv source_dir dest_dir</code></pre></li>
+<li>复制<pre><code>$ cp -r source_dir dest_dir</code></pre></li>
 </ul>
+<h2 id="2-2-目录切换"><a href="#2-2-目录切换" class="headerlink" title="2.2 目录切换"></a>2.2 目录切换</h2><ul>
+<li>切换目录<pre><code>$ cd destination</code></pre></li>
+<li>切换到上一个工作目录<pre><code>$ cd -</code></pre></li>
+<li>切换到home目录<pre><code>$ cd or cd ~</code></pre></li>
+<li>显示当前路径<pre><code>$ pwd</code></pre></li>
+<li>更改当前工作路径为 path<pre><code>cd path</code></pre></li>
+</ul>
+<h2 id="2-3-列出目录项"><a href="#2-3-列出目录项" class="headerlink" title="2.3 列出目录项"></a>2.3 列出目录项</h2><ul>
+<li>显示当前目录下的文件<pre><code>$ ls</code></pre></li>
+<li>按时间排序，以列表的方式显示目录项<pre><code>$ ls -lrt</code></pre></li>
+<li>显示索引，显示全部文件，以列表显示，以文件大小排序<pre><code>$ ls -sail</code></pre></li>
+</ul>
+<blockquote>
+<p>在.bashrc中设置命令别名<br>alias lsl=’ls -lrt’<br>alisa lm=’ls -a|more’<br>这样使用lsl，就可以显示按照修改时间排序，以列表显示<br>给每项文件前面增加一个id编号<br>ls | cat -n</p>
+</blockquote>
+<h2 id="2-4-查找目录及文件"><a href="#2-4-查找目录及文件" class="headerlink" title="2.4 查找目录及文件"></a>2.4 查找目录及文件</h2><ul>
+<li>在此我们将使用强大的<code>find</code>命令和<code>locate</code>命令</li>
+<li>搜寻文件或目录(xargs 命令解释文件)<pre><code>$ find ./ -name &quot;python*&quot; | xargs file</code></pre></li>
+<li>注意到 <code>-name</code> 参数后面可跟一个正则表达式字符串。<pre><code>$ find ./ -name &quot;task[12345].c&quot;</code></pre></li>
+<li>配合 <code>-exec</code> 参数产生强大的效果，比如删除所有c文件<pre><code>$ find ./ -name &quot;*.c&quot; -exec rm {} \;</code></pre></li>
+<li>find是实时查找，如果需要更快的查询，可以试试<code>locate</code><pre><code>$ locate python</code></pre></li>
+<li>locate会为文件系统建立索引数据库，如果有文件更新，需要定期执行更新命令来更新索引库<pre><code>$updatedb</code></pre></li>
+</ul>
+<h2 id="2-5-查看文件内容"><a href="#2-5-查看文件内容" class="headerlink" title="2.5 查看文件内容"></a>2.5 查看文件内容</h2><ul>
+<li>查看文件命令： cat vi head tail more</li>
+<li>显示时同时显示行号<pre><code>$ cat -n</code></pre></li>
+<li>按页显示列表内容<pre><code>$ ls -al| more</code></pre></li>
+<li>只看前10行<pre><code>$ head -10 file</code></pre></li>
+<li>显示文件的第一行<pre><code>$ head -1 file</code></pre></li>
+<li>显示文件倒数第五行<pre><code>$ tail -5 file</code></pre></li>
+<li>查看两个文件之间的区别<pre><code>$ diff file1 file2</code></pre></li>
+<li>动态显示文本最新信息<pre><code>$ tail -f file.log</code></pre></li>
+</ul>
+<h2 id="2-6-查找文件内容"><a href="#2-6-查找文件内容" class="headerlink" title="2.6 查找文件内容"></a>2.6 查找文件内容</h2><ul>
+<li>使用<code>egrep</code>查询文件内容<pre><code>$ egrep &apos;expression&apos; file</code></pre></li>
+</ul>
+<p>2.7 文件于目录权限修改</p>
+<ul>
+<li>改变文件的拥有者 chown<pre><code>$ sudo chown user file</code></pre></li>
+<li>改变文件读，写，执行等属性 <pre><code>$ chmod +rwx file</code></pre></li>
+<li>递归子目录修改<pre><code>$ chmod -R dir/</code></pre></li>
+<li>增加脚本可执行权限<pre><code>$ chmod a+x script</code></pre></li>
+</ul>
+<h2 id="2-8-给文件增加别名"><a href="#2-8-给文件增加别名" class="headerlink" title="2.8 给文件增加别名"></a>2.8 给文件增加别名</h2><ul>
+<li>创建硬链接,硬链接保存了指向源文件的位置和信息也保存了源文件的数据,引用硬链接相当于引用源文件<pre><code>$ cp -l source link
+$ ln source link</code></pre></li>
+<li>创建软链接，软链接只保存了源文件的位置和信息<pre><code>$ cp -s source link
+   $ link -s source link</code></pre></li>
+</ul>
+<h2 id="2-9-管道和重定向"><a href="#2-9-管道和重定向" class="headerlink" title="2.9 管道和重定向"></a>2.9 管道和重定向</h2><ul>
+<li>批处理命令连接执行，使用|，下一个命令的参数是上一个命令的返回结果<pre><code>$ cat file | grep &quot;python&quot;</code></pre></li>
+<li>串联使用命令：使用分号<pre><code>$ ls ; cd</code></pre></li>
+<li>如果前面执行的命令成功，则执行后面一条，否则则不执行<pre><code>$ cmd1 &amp;&amp; cmd2</code></pre></li>
+<li>前面成功则执行命令1，失败则执行命令2<pre><code>$ cmd &amp;&amp; cmd1 || cmd 2</code></pre></li>
+</ul>
+<hr>
+<ul>
+<li><p>重定向</p>
+<blockquote>
+<p>有时候你想要把一个命令的输出信息保存在一个文件里而不是在显示器上显示它，你就会用到重定向。重定向可以把一个文件用到某个命令的输出上，也可以用在输出上。</p>
+</blockquote>
+<pre><code>$ cmd &gt; outputfile
+$ date &gt; output.log</code></pre></li>
+<li><p>清空文件</p>
+<pre><code>$ &gt; file</code></pre></li>
+<li><p>如果要在文件后面追加内容而不删除原来的内容，可以使用</p>
+<pre><code>$ cmd &gt;&gt; file</code></pre></li>
+</ul>
+<hr>
+<ul>
+<li><p>输入重定向</p>
+<blockquote>
+<p>输入重定向将文件的内容定向到命令。</p>
+</blockquote>
+<pre><code>$ cmd &lt; inputfile
+$ wc &lt; inputfile</code></pre><blockquote>
+<p>wc 命令提供了对文本中的行数次数和字节数的计数</p>
+</blockquote>
+</li>
+<li><p>内联输入重定向</p>
+<blockquote>
+<p>你会在命令行中输入数据直到输入EOF这个制定的关键字</p>
+</blockquote>
+<pre><code>$ wc &lt;&lt; EOF</code></pre></li>
+</ul>
+<h2 id="2-10-设置环境变量"><a href="#2-10-设置环境变量" class="headerlink" title="2.10 设置环境变量"></a>2.10 设置环境变量</h2><blockquote>
+<p>启动帐号后自动执行的文件是<code>.profile</code>，通过这个文件可以设置自己的环境变量<br>安装的软件路径一般都要加入到path中</p>
+</blockquote>
+<h2 id="2-11-bash快捷输入或删除"><a href="#2-11-bash快捷输入或删除" class="headerlink" title="2.11 bash快捷输入或删除"></a>2.11 bash快捷输入或删除</h2><blockquote>
+<p>快捷键Ctl-U   删除光标到行首的所有字符,在某些设置下,删除全行<br>Ctl-W   删除当前光标到前边的最近一个空格之间的字符<br>Ctl-H   backspace,删除光标前边的字符<br>Ctl-R   匹配最相近的一个文件，然后输<br>Ctl-U   删除光标到行首的所有字符,在某些设置下,删除全行</p>
+</blockquote>
+<pre><code>综合应用:查找record.log中包含AAA，但不包含BBB的记录的总数
+cat -v revord.log|grep AAA|grep -v BBB|wc -l</code></pre>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>linux命令学习笔记2 文件及目录管理</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="John Doe">John Doe</a></p>
+    <p><span class="copy-title">发布时间:</span>2017-04-27, 13:57:14</p>
+    <p><span class="copy-title">最后更新:</span>2017-04-30, 19:34:03</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2017/04/27/2017-04-27-linux-command-tutorial2/" title="linux命令学习笔记2 文件及目录管理">http://yoursite.com/2017/04/27/2017-04-27-linux-command-tutorial2/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 Yelog</p>
