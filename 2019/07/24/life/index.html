@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>linux命令学习笔记1 使用命令帮助 | Hexo</title>
-  <meta name="keywords" content=" linux , ubuntu ">
-  <meta name="description" content="linux命令学习笔记1 使用命令帮助 | Hexo">
+  <title>life | Hexo</title>
+  <meta name="keywords" content=" mylove ">
+  <meta name="description" content="life | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -256,9 +256,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-linux-command-tutorial1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-life" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">linux命令学习笔记1 使用命令帮助</h1>
+        <h1 class="article-title">life</h1>
     
     <div class="article-meta">
         
@@ -266,25 +266,21 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="linux">linux</a>/
-            
-                <a href="javascript:" data-rel="command">command</a>
+                <a href="javascript:" data-rel="mylove">mylove</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color1">linux</a>
-            
-            <a href="javascript:" class="color2">ubuntu</a>
+            <a href="javascript:" class="color2">mylove</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2017-09-22 11:15:57'>2017-04-26 00:00</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-24 23:29:10'>2019-07-24 23:07</time>
         
     </div>
     <div class="article-meta">
@@ -306,7 +302,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-命令学习笔记"><span class="toc-text">Linux 命令学习笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章-学会使用命令帮助"><span class="toc-text">第一章 学会使用命令帮助</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-回忆命令"><span class="toc-text">1.1 回忆命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-简要查看路径"><span class="toc-text">1.2 简要查看路径</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -321,64 +317,12 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Linux-命令学习笔记"><a href="#Linux-命令学习笔记" class="headerlink" title="Linux 命令学习笔记"></a>Linux 命令学习笔记</h1><p>对linux命令的熟悉是操作linux系统的基础中的基础。<br>作为刚开始上手linux的新手，对基本命令应该谙熟于心，使<br>用的时候才能高效地使用。</p>
-<h1 id="第一章-学会使用命令帮助"><a href="#第一章-学会使用命令帮助" class="headerlink" title="第一章 学会使用命令帮助"></a>第一章 学会使用命令帮助</h1><h2 id="1-1-回忆命令"><a href="#1-1-回忆命令" class="headerlink" title="1.1 回忆命令"></a>1.1 回忆命令</h2><p>在linux终端，面对命令不知道怎么用，或者不记得命令的拼写及参数时，我们需要求助于系统的帮助文档；<br>linux系统内置的帮助文档很详细，通常能解决我们的问题，我们需要掌握如何正确的去使用它们。</p>
-<ul>
-<li><p>只记得部分命令的场合，我们可以用 man -k 来搜索（-k keyword)，搜索的结果</p>
-<pre><code>$ man -k printf0
-dprintf (3)          - formatted output conversion
-fprintf (3)          - formatted output conversion
-...</code></pre></li>
-<li><p>需要知道某个命令的简要说明可以使用whatis（非常方便）：</p>
-<pre><code>$ whatis apt
-apt (8)              - command-line interface</code></pre></li>
-</ul>
-<ol>
-<li><strong>whatis能显示出命令所在的 *文档类别*（在下面man命令中介绍）并给出它们简要的描述</strong></li>
-</ol>
-<ul>
-<li>如果只记得命令的部分，可以用正则匹配的办法搜索：<pre><code>$ whatis -w &quot;loca*&quot;
-locale (1)           - get locale-specific information
-locale (5)           - describes a locale definition file
-locale (7)           - description of multilanguage support
-locale-gen (8)       - generates localisation files from template
-...</code></pre></li>
-</ul>
-<hr>
-<ul>
-<li>如果想要知道命令的具体参数和使用方法，我们需要用到强大的man<pre><code>$ man date
-DATE(1)
-NAME
-date - print or set the system date and time
-SYNOPSIS
-date [OPTION]... [+FORMAT]
-date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
-DESCRIPTION
-...</code></pre></li>
-</ul>
-<ol>
-<li><strong>使用f，b上下翻页；j，k 上下移动一行。；使用q退出帮助手册。</strong></li>
-<li><strong>man的帮助手册中，将帮助文档分为了9个类别，有的关键字存在多个类别中，我们就需要制定特定的类别来查看；（一般我们查询bash命令，归类在第一类中。</strong><blockquote>
-<p>(1)、用户可以操作的命令或者是可执行文件<br> (2)、系统核心可调用的函数与工具等<br> (3)、一些常用的函数与数据库<br> (4)、设备文件的说明<br> (5)、设置文件或者某些文件的格式<br> (6)、游戏<br> (7)、惯例与协议等。例如Linux标准文件系统、网络协议、ASCⅡ，码等说明内容<br> (8)、系统管理员可用的管理条令<br> (9)、与内核有关的文件</p>
-</blockquote>
-</li>
-</ol>
-<hr>
-<ul>
-<li>而更详细的介绍,则可使用info命令<pre><code>info apt
-...</code></pre></li>
-</ul>
-<hr>
-<h2 id="1-2-简要查看路径"><a href="#1-2-简要查看路径" class="headerlink" title="1.2 简要查看路径"></a>1.2 简要查看路径</h2><ul>
-<li><p>查看程序的binary文件所在路径</p>
-<pre><code>$ which make
-/usr/bin/make</code></pre></li>
-<li><p>查看程序的搜索路径:</p>
-<pre><code>$ whereis python
-python: /usr/bin/python3.5 /usr/bin/python3.5-config /usr/bin/python3.5m /usr/bin/python2.7 /usr/bin/python2.7-config /usr/bin/python /usr/bin/python3.5m-config /usr/lib/python3.5 /usr/lib/python3.6 /usr/lib/python2.7 /etc/python3.5 /etc/python /etc/python2.7 /usr/local/lib/python3.5 /usr/local/lib/python2.7 /usr/include/python3.5 /usr/include/python3.5m /usr/include/python2.7 /usr/share/python /usr/share/man/man1/python.1.gz</code></pre></li>
-<li><p>总结</p>
-<pre><code>whatis info man which whereis</code></pre></li>
-</ul>
+        <p>今天早上醒来，我感觉不一样了。</p>
+<p>我的脑海里全是你的图像，那些经过美化修饰的情节，我也久久地没有平复下来，我的脑袋也很沉重，我的眼睛和肢体都不再受控，只是饥渴地再寻找你。过了一会后，我的心里不再害怕，只是感到沉默。</p>
+<p>我去了医院，拿着之前的检查。医生说我主要是心理问题，可能有轻微的前列腺炎，在我这个年龄段很常见。我吃了药，感觉好了很多，但是很累。</p>
+<p>想起了你的提醒，平常的坐姿确实不对，而且每天都坐了很久，喝水也喝的不够，造成容易犯困。晚上睡觉也弄得很晚，睡眠质量也不好，睡觉的时候经常受凉，早上起来就会感觉胃很不舒服。</p>
+<p>整天，我都控制不住自己，心理很慌张。</p>
+<p>我想我知道了我们矛盾的根源之一，就是对于重大问题，我们从来没有理性仔细讨论过，我想当我给你说这个问题的时候，总是害怕触及你的敏感的心理，总是带着一副恐惧的样子向你提出，但是我们应该非常理性的，详细地做一场辩论，因为你和我有同样的缺点，就是总是在第一时间反驳，而我们都很难分清这是对方的真实想法还是气话，当辩论的时候，真正的想法会越辩越明。我们虽然时常在一起，但是真正的交流却很少，当我们真正交流的时候却总是置气，说不出心理真正想要说的话。我不是知道是我太害怕，还是太在意你，也许都是吧。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1014649983@qq.com </span>
@@ -392,12 +336,12 @@ python: /usr/bin/python3.5 /usr/bin/python3.5-config /usr/bin/python3.5m /usr/bi
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>linux命令学习笔记1 使用命令帮助</p>
+    <p><span class="copy-title">文章标题:</span>life</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="SizheRee">SizheRee</a></p>
-    <p><span class="copy-title">发布时间:</span>2017-04-26, 00:00:00</p>
-    <p><span class="copy-title">最后更新:</span>2017-09-22, 11:15:57</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2017/04/26/linux-command-tutorial1/" title="linux命令学习笔记1 使用命令帮助">http://yoursite.com/2017/04/26/linux-command-tutorial1/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-24, 23:07:43</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-24, 23:29:10</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/24/life/" title="life">http://yoursite.com/2019/07/24/life/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
