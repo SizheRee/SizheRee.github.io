@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>linux命令学习笔记2 文件及目录管理 | Hexo</title>
-  <meta name="keywords" content=" linux , ubuntu ">
-  <meta name="description" content="linux命令学习笔记2 文件及目录管理 | Hexo">
+  <title>life-2019-08-03 | Hexo</title>
+  <meta name="keywords" content=" life ">
+  <meta name="description" content="life-2019-08-03 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="​     我想当我写下了诀别信之后我就会与自己和解，但是却并没有。 ​    这几天发生的事让我非常矛盾，我并不以任何方式理解了我的处境，我只是恶意的放纵着自己，冷静一想，那让我们分手的异地问题我又真的仔细思考了吗，这只不过是一个没有经过充分讨论的预设立场，我却毫不不顾她的想法去驳斥她，逼迫她，好像这样我就站在了一个制高点上。终于我意识到，这一切其实都是我的问题，我的虚弱的状态，说着满嘴胡话大道">
 <meta name="keywords" content="mylove">
@@ -216,9 +216,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-linux-command-tutorial2" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-life" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">linux命令学习笔记2 文件及目录管理</h1>
+        <h1 class="article-title">life-2019-08-03</h1>
     
     <div class="article-meta">
         
@@ -226,25 +226,21 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="linux">linux</a>/
-            
-                <a href="javascript:" data-rel="command">command</a>
+                <a href="javascript:" data-rel="life">life</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color1">linux</a>
-            
-            <a href="javascript:" class="color2">ubuntu</a>
+            <a href="javascript:" class="color5">life</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2017-04-30 19:34:03'>2017-04-27 13:57</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-03 13:52:07'>2019-08-03 12:34</time>
         
     </div>
     <div class="article-meta">
@@ -266,7 +262,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第二章-文件及目录管理"><span class="toc-text">第二章 文件及目录管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-0-概述"><span class="toc-text">2.0 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-创建和删除"><span class="toc-text">2.1 创建和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-目录切换"><span class="toc-text">2.2 目录切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-列出目录项"><span class="toc-text">2.3 列出目录项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-查找目录及文件"><span class="toc-text">2.4 查找目录及文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-查看文件内容"><span class="toc-text">2.5 查看文件内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-查找文件内容"><span class="toc-text">2.6 查找文件内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-给文件增加别名"><span class="toc-text">2.8 给文件增加别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-管道和重定向"><span class="toc-text">2.9 管道和重定向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-10-设置环境变量"><span class="toc-text">2.10 设置环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-11-bash快捷输入或删除"><span class="toc-text">2.11 bash快捷输入或删除</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -281,109 +277,12 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第二章-文件及目录管理"><a href="#第二章-文件及目录管理" class="headerlink" title="第二章 文件及目录管理"></a>第二章 文件及目录管理</h1><h2 id="2-0-概述"><a href="#2-0-概述" class="headerlink" title="2.0 概述"></a>2.0 概述</h2><p>文件管理不外乎文件或目录的创建,删除，查询，移动。有<code>mkdir/rm/mv</code>。<br>文件查询是重点，用<code>find</code>来进行查询；<code>find</code>参数丰富，非常强大。<br>查看文件内容是个大的话题，文本的处理有很多工具供我们使用。在本章中只是点到即止。<br>有时候我们需要给文件备份，或者创建一个别名，我们需要用到<code>ln</code>。</p>
-<h2 id="2-1-创建和删除"><a href="#2-1-创建和删除" class="headerlink" title="2.1 创建和删除"></a>2.1 创建和删除</h2><ul>
-<li>目录的创建<pre><code>$ mkdir dir</code></pre></li>
-<li>目录的删除(只能删除空目录)<pre><code>$ rmdir dir</code></pre></li>
-<li>删除非空目录(如果去掉f参数每个删除都会提示y/n)<pre><code>$ rm -rf file 目录</code></pre></li>
-<li>删除日志<pre><code>$ rm *log
-(等价： $ find ./ -name &quot;*log&quot; -exec rm {} \;)</code></pre></li>
-<li>移动或重命名<pre><code>$ mv source_dir dest_dir</code></pre></li>
-<li>复制<pre><code>$ cp -r source_dir dest_dir</code></pre></li>
-</ul>
-<h2 id="2-2-目录切换"><a href="#2-2-目录切换" class="headerlink" title="2.2 目录切换"></a>2.2 目录切换</h2><ul>
-<li>切换目录<pre><code>$ cd destination</code></pre></li>
-<li>切换到上一个工作目录<pre><code>$ cd -</code></pre></li>
-<li>切换到home目录<pre><code>$ cd or cd ~</code></pre></li>
-<li>显示当前路径<pre><code>$ pwd</code></pre></li>
-<li>更改当前工作路径为 path<pre><code>cd path</code></pre></li>
-</ul>
-<h2 id="2-3-列出目录项"><a href="#2-3-列出目录项" class="headerlink" title="2.3 列出目录项"></a>2.3 列出目录项</h2><ul>
-<li>显示当前目录下的文件<pre><code>$ ls</code></pre></li>
-<li>按时间排序，以列表的方式显示目录项<pre><code>$ ls -lrt</code></pre></li>
-<li>显示索引，显示全部文件，以列表显示，以文件大小排序<pre><code>$ ls -sail</code></pre></li>
-</ul>
-<blockquote>
-<p>在.bashrc中设置命令别名<br>alias lsl=’ls -lrt’<br>alisa lm=’ls -a|more’<br>这样使用lsl，就可以显示按照修改时间排序，以列表显示<br>给每项文件前面增加一个id编号<br>ls | cat -n</p>
-</blockquote>
-<h2 id="2-4-查找目录及文件"><a href="#2-4-查找目录及文件" class="headerlink" title="2.4 查找目录及文件"></a>2.4 查找目录及文件</h2><ul>
-<li>在此我们将使用强大的<code>find</code>命令和<code>locate</code>命令</li>
-<li>搜寻文件或目录(xargs 命令解释文件)<pre><code>$ find ./ -name &quot;python*&quot; | xargs file</code></pre></li>
-<li>注意到 <code>-name</code> 参数后面可跟一个正则表达式字符串。<pre><code>$ find ./ -name &quot;task[12345].c&quot;</code></pre></li>
-<li>配合 <code>-exec</code> 参数产生强大的效果，比如删除所有c文件<pre><code>$ find ./ -name &quot;*.c&quot; -exec rm {} \;</code></pre></li>
-<li>find是实时查找，如果需要更快的查询，可以试试<code>locate</code><pre><code>$ locate python</code></pre></li>
-<li>locate会为文件系统建立索引数据库，如果有文件更新，需要定期执行更新命令来更新索引库<pre><code>$updatedb</code></pre></li>
-</ul>
-<h2 id="2-5-查看文件内容"><a href="#2-5-查看文件内容" class="headerlink" title="2.5 查看文件内容"></a>2.5 查看文件内容</h2><ul>
-<li>查看文件命令： cat vi head tail more</li>
-<li>显示时同时显示行号<pre><code>$ cat -n</code></pre></li>
-<li>按页显示列表内容<pre><code>$ ls -al| more</code></pre></li>
-<li>只看前10行<pre><code>$ head -10 file</code></pre></li>
-<li>显示文件的第一行<pre><code>$ head -1 file</code></pre></li>
-<li>显示文件倒数第五行<pre><code>$ tail -5 file</code></pre></li>
-<li>查看两个文件之间的区别<pre><code>$ diff file1 file2</code></pre></li>
-<li>动态显示文本最新信息<pre><code>$ tail -f file.log</code></pre></li>
-</ul>
-<h2 id="2-6-查找文件内容"><a href="#2-6-查找文件内容" class="headerlink" title="2.6 查找文件内容"></a>2.6 查找文件内容</h2><ul>
-<li>使用<code>egrep</code>查询文件内容<pre><code>$ egrep &apos;expression&apos; file</code></pre></li>
-</ul>
-<p>2.7 文件于目录权限修改</p>
-<ul>
-<li>改变文件的拥有者 chown<pre><code>$ sudo chown user file</code></pre></li>
-<li>改变文件读，写，执行等属性 <pre><code>$ chmod +rwx file</code></pre></li>
-<li>递归子目录修改<pre><code>$ chmod -R dir/</code></pre></li>
-<li>增加脚本可执行权限<pre><code>$ chmod a+x script</code></pre></li>
-</ul>
-<h2 id="2-8-给文件增加别名"><a href="#2-8-给文件增加别名" class="headerlink" title="2.8 给文件增加别名"></a>2.8 给文件增加别名</h2><ul>
-<li>创建硬链接,硬链接保存了指向源文件的位置和信息也保存了源文件的数据,引用硬链接相当于引用源文件<pre><code>$ cp -l source link
-$ ln source link</code></pre></li>
-<li>创建软链接，软链接只保存了源文件的位置和信息<pre><code>$ cp -s source link
-   $ link -s source link</code></pre></li>
-</ul>
-<h2 id="2-9-管道和重定向"><a href="#2-9-管道和重定向" class="headerlink" title="2.9 管道和重定向"></a>2.9 管道和重定向</h2><ul>
-<li>批处理命令连接执行，使用|，下一个命令的参数是上一个命令的返回结果<pre><code>$ cat file | grep &quot;python&quot;</code></pre></li>
-<li>串联使用命令：使用分号<pre><code>$ ls ; cd</code></pre></li>
-<li>如果前面执行的命令成功，则执行后面一条，否则则不执行<pre><code>$ cmd1 &amp;&amp; cmd2</code></pre></li>
-<li>前面成功则执行命令1，失败则执行命令2<pre><code>$ cmd &amp;&amp; cmd1 || cmd 2</code></pre></li>
-</ul>
-<hr>
-<ul>
-<li><p>重定向</p>
-<blockquote>
-<p>有时候你想要把一个命令的输出信息保存在一个文件里而不是在显示器上显示它，你就会用到重定向。重定向可以把一个文件用到某个命令的输出上，也可以用在输出上。</p>
-</blockquote>
-<pre><code>$ cmd &gt; outputfile
-$ date &gt; output.log</code></pre></li>
-<li><p>清空文件</p>
-<pre><code>$ &gt; file</code></pre></li>
-<li><p>如果要在文件后面追加内容而不删除原来的内容，可以使用</p>
-<pre><code>$ cmd &gt;&gt; file</code></pre></li>
-</ul>
-<hr>
-<ul>
-<li><p>输入重定向</p>
-<blockquote>
-<p>输入重定向将文件的内容定向到命令。</p>
-</blockquote>
-<pre><code>$ cmd &lt; inputfile
-$ wc &lt; inputfile</code></pre><blockquote>
-<p>wc 命令提供了对文本中的行数次数和字节数的计数</p>
-</blockquote>
-</li>
-<li><p>内联输入重定向</p>
-<blockquote>
-<p>你会在命令行中输入数据直到输入EOF这个制定的关键字</p>
-</blockquote>
-<pre><code>$ wc &lt;&lt; EOF</code></pre></li>
-</ul>
-<h2 id="2-10-设置环境变量"><a href="#2-10-设置环境变量" class="headerlink" title="2.10 设置环境变量"></a>2.10 设置环境变量</h2><blockquote>
-<p>启动帐号后自动执行的文件是<code>.profile</code>，通过这个文件可以设置自己的环境变量<br>安装的软件路径一般都要加入到path中</p>
-</blockquote>
-<h2 id="2-11-bash快捷输入或删除"><a href="#2-11-bash快捷输入或删除" class="headerlink" title="2.11 bash快捷输入或删除"></a>2.11 bash快捷输入或删除</h2><blockquote>
-<p>快捷键Ctl-U   删除光标到行首的所有字符,在某些设置下,删除全行<br>Ctl-W   删除当前光标到前边的最近一个空格之间的字符<br>Ctl-H   backspace,删除光标前边的字符<br>Ctl-R   匹配最相近的一个文件，然后输<br>Ctl-U   删除光标到行首的所有字符,在某些设置下,删除全行</p>
-</blockquote>
-<pre><code>综合应用:查找record.log中包含AAA，但不包含BBB的记录的总数
-cat -v revord.log|grep AAA|grep -v BBB|wc -l</code></pre>
+        <p>写下这一篇的目的是开始做一次探索，这次探索是终于的，准备好的，决定要到达目标的探索，我要开始对自己做一次精神分析。</p>
+<p>很早的经验显示，我的自我意识只是组成个体的我的一部分，在日常生活中的很多时候，我意识到将一些复杂的事情交给大脑中的自动学习区域，但是这些复杂事情并不像走路一样容易完成，其后果是我失去了很多行为的主动权，并且使我在生活中处于被动。</p>
+<p>我的记忆告诉我，很早的时候我对这一切都做过反抗，但是效果很有限，那时的我正遭受病痛的折磨，想要从自己的精神世界中找到线索来解释遭受的苦难，最后发现我的苦难并不是我的精神出了问题，仅仅是因为我对我身体的观察的疏忽。</p>
+<p>对自我的强迫作用是很有限的，每当我告诉我要做到什么或者是变成什么时候，我并不感到激动和兴奋，也就注定了我不会有信心完成这样一件事，我无法将一个想法植入到脑袋里，在精神这一层面，语言的作用似乎变得很有限了，当我回忆自己人生中的几个变化时，总是觉得这是深深的思考所带来的，当思考触及了问题的本质，想法就会自动地植入到大脑里，于是我决定做这样一次精神分析。</p>
+<p>与以往不同的是，我过去的思考总是十分游离的，离散的，对于一个问题的进入和退出都是随机的，但这一次我需要做一次系统的研究，并且记录下来，我本来只想记录给自己看，但是我知道同时代的人们与我有着同样的困惑，这样地博客记录让我觉得新奇，我隐约觉得我与时代开始交流了，并且就要碰撞思维。</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1014649983@qq.com </span>
     </div>
@@ -396,12 +295,12 @@ cat -v revord.log|grep AAA|grep -v BBB|wc -l</code></pre>
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>linux命令学习笔记2 文件及目录管理</p>
+    <p><span class="copy-title">文章标题:</span>life-2019-08-03</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="SizheRee">SizheRee</a></p>
-    <p><span class="copy-title">发布时间:</span>2017-04-27, 13:57:14</p>
-    <p><span class="copy-title">最后更新:</span>2017-04-30, 19:34:03</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2017/04/27/linux-command-tutorial2/" title="linux命令学习笔记2 文件及目录管理">http://yoursite.com/2017/04/27/linux-command-tutorial2/</a>
+    <p><span class="copy-title">发布时间:</span>2019-08-03, 12:34:06</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-03, 13:52:07</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/03/life/" title="life-2019-08-03">http://yoursite.com/2019/08/03/life/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
