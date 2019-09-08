@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="linux命令学习笔记1 使用命令帮助"><meta name="keywords" content="linux,ubuntu"><meta name="author" content="SizheRee"><meta name="copyright" content="SizheRee"><title>linux命令学习笔记1 使用命令帮助 | Hexo</title><link rel="shortcut icon" href="/iamges/favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-命令学习笔记"><span class="toc-number">1.</span> <span class="toc-text">Linux 命令学习笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一章-学会使用命令帮助"><span class="toc-number">2.</span> <span class="toc-text">第一章 学会使用命令帮助</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-回忆命令"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 回忆命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-简要查看路径"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 简要查看路径</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/images/cat.jpg"></div><div class="author-info__name text-center">SizheRee</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/SizheRee">Github</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">6</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">3</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div class="plain" id="top-container"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Hexo</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div></div><div class="layout" id="content-inner"><article id="post"><div class="plain" id="post-title">linux命令学习笔记1 使用命令帮助</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-26</time><span class="post-meta__separator">|</span><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/linux/"> linux</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/linux/command/"> command</a></div><div class="article-container" id="post-content"><h1 id="Linux-命令学习笔记"><a href="#Linux-命令学习笔记" class="headerlink" title="Linux 命令学习笔记"></a>Linux 命令学习笔记</h1><p>对linux命令的熟悉是操作linux系统的基础中的基础。<br>作为刚开始上手linux的新手，对基本命令应该谙熟于心，使<br>用的时候才能高效地使用。</p>
+<h1 id="第一章-学会使用命令帮助"><a href="#第一章-学会使用命令帮助" class="headerlink" title="第一章 学会使用命令帮助"></a>第一章 学会使用命令帮助</h1><h2 id="1-1-回忆命令"><a href="#1-1-回忆命令" class="headerlink" title="1.1 回忆命令"></a>1.1 回忆命令</h2><p>在linux终端，面对命令不知道怎么用，或者不记得命令的拼写及参数时，我们需要求助于系统的帮助文档；<br>linux系统内置的帮助文档很详细，通常能解决我们的问题，我们需要掌握如何正确的去使用它们。</p>
+<ul>
+<li><p>只记得部分命令的场合，我们可以用 man -k 来搜索（-k keyword)，搜索的结果</p>
+<pre><code>$ man -k printf0
+dprintf (3)          - formatted output conversion
+fprintf (3)          - formatted output conversion
+...</code></pre></li>
+<li><p>需要知道某个命令的简要说明可以使用whatis（非常方便）：</p>
+<pre><code>$ whatis apt
+apt (8)              - command-line interface</code></pre></li>
+</ul>
+<ol>
+<li><strong>whatis能显示出命令所在的 *文档类别*（在下面man命令中介绍）并给出它们简要的描述</strong></li>
+</ol>
+<ul>
+<li>如果只记得命令的部分，可以用正则匹配的办法搜索：<pre><code>$ whatis -w &quot;loca*&quot;
+locale (1)           - get locale-specific information
+locale (5)           - describes a locale definition file
+locale (7)           - description of multilanguage support
+locale-gen (8)       - generates localisation files from template
+...</code></pre></li>
+</ul>
+<hr>
+<ul>
+<li>如果想要知道命令的具体参数和使用方法，我们需要用到强大的man<pre><code>$ man date
+DATE(1)
+NAME
+date - print or set the system date and time
+SYNOPSIS
+date [OPTION]... [+FORMAT]
+date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+DESCRIPTION
+...</code></pre></li>
+</ul>
+<ol>
+<li><strong>使用f，b上下翻页；j，k 上下移动一行。；使用q退出帮助手册。</strong></li>
+<li><strong>man的帮助手册中，将帮助文档分为了9个类别，有的关键字存在多个类别中，我们就需要制定特定的类别来查看；（一般我们查询bash命令，归类在第一类中。</strong><blockquote>
+<p>(1)、用户可以操作的命令或者是可执行文件<br> (2)、系统核心可调用的函数与工具等<br> (3)、一些常用的函数与数据库<br> (4)、设备文件的说明<br> (5)、设置文件或者某些文件的格式<br> (6)、游戏<br> (7)、惯例与协议等。例如Linux标准文件系统、网络协议、ASCⅡ，码等说明内容<br> (8)、系统管理员可用的管理条令<br> (9)、与内核有关的文件</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<ul>
+<li>而更详细的介绍,则可使用info命令<pre><code>info apt
+...</code></pre></li>
+</ul>
+<hr>
+<h2 id="1-2-简要查看路径"><a href="#1-2-简要查看路径" class="headerlink" title="1.2 简要查看路径"></a>1.2 简要查看路径</h2><ul>
+<li><p>查看程序的binary文件所在路径</p>
+<pre><code>$ which make
+/usr/bin/make</code></pre></li>
+<li><p>查看程序的搜索路径:</p>
+<pre><code>$ whereis python
+python: /usr/bin/python3.5 /usr/bin/python3.5-config /usr/bin/python3.5m /usr/bin/python2.7 /usr/bin/python2.7-config /usr/bin/python /usr/bin/python3.5m-config /usr/lib/python3.5 /usr/lib/python3.6 /usr/lib/python2.7 /etc/python3.5 /etc/python /etc/python2.7 /usr/local/lib/python3.5 /usr/local/lib/python2.7 /usr/include/python3.5 /usr/include/python3.5m /usr/include/python2.7 /usr/share/python /usr/share/man/man1/python.1.gz</code></pre></li>
+<li><p>总结</p>
+<pre><code>whatis info man which whereis</code></pre></li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">SizheRee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://sizheree.github.io/2017/04/26/linux-command-tutorial1/">http://sizheree.github.io/2017/04/26/linux-command-tutorial1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://sizheree.github.io">Hexo</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/linux/">linux</a><a class="post-meta__tags" href="/tags/ubuntu/">ubuntu</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="/images/alipay.jpg"><div class="post-qr-code__desc">支付宝打赏</div></div></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/04/27/linux-command-tutorial2/"><i class="fa fa-chevron-left">  </i><span>linux命令学习笔记2 文件及目录管理</span></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '283805975f91ba7e56c7',
+  clientSecret: '4958d7378aa5642a6b6fbd491315503e14da6968',
+  repo: 'sizheree.github.io',
+  owner: 'SizheRee',
+  admin: 'SizheRee',
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2019 By SizheRee</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
